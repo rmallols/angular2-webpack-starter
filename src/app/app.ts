@@ -7,6 +7,7 @@ import {FORM_PROVIDERS} from 'angular2/common';
 
 import {RouterActive} from './directives/router-active';
 import {Home} from './home/home';
+import {Experimental} from './experimental/experimental';
 
 /*
  * App Component
@@ -46,6 +47,9 @@ import {Home} from './home/home';
           <li router-active>
             <a [routerLink]=" ['About'] ">About</a>
           </li>
+          <li router-active>
+            <a [routerLink]=" ['Experimental'] ">Experimental</a>
+          </li>          
         </ul>
       </nav>
     </header>
@@ -67,6 +71,7 @@ import {Home} from './home/home';
   { path: '/home', component: Home, name: 'Home' },
   // Async load a component using Webpack's require with es6-promise-loader and webpack `require`
   { path: '/about', loader: () => require('es6-promise!./about/about')('About'), name: 'About' },
+  { path: '/experimental', component: Experimental, name: 'Experimental' },
   { path: '/**', redirectTo: ['Index'] }
 ])
 export class App {

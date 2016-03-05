@@ -14,7 +14,7 @@ console.log('`About` component loaded asynchronously');
 })
 export class About {
   constructor() {
-
+	  console.log('hello `About` component from CONSTRUCTOR');
   }
 
   ngOnInit() {
